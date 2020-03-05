@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/name_configuration"
+        android:title="Name Mech"
+        android:icon="@drawable/ic_action_name"
+        />
+
+    <item
+        android:id="@+id/mech_skills"
+        android:title="Skills"
+        android:icon="@drawable/ic_action_skills"
+        />
+
+    <item
+        android:id="@+id/stat_hub"
+        android:title="Stat Hub"
+        android:icon="@drawable/ic_action_stats"
+        />
+
+    <item
+        android:id="@+id/mech_weapons"
+        android:title="Weapons"
+        android:icon="@drawable/ic_action_weapon"
+        />
+
+    <item
+        android:id="@+id/mech_systems"
+        android:title="Systems"
+        android:icon="@drawable/ic_action_system"
+        />
+</menu>

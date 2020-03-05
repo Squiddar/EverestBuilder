@@ -1,0 +1,143 @@
+<resources>
+    <string name="app_name">EverestBuilder</string>
+    <string name="mech_traits"><b>INITIATIVE</b>\n1/scene the Everest may take any quick action as a free action.\n\n<b>REPLACEABLE PARTS</b>\nWhile resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs.</string>
+    <string name="mech_core_power"><b>CORE SYSTEM</b>\nHYPERSPEC FUEL INJECTOR\nPower Up\nActive (1CP), Protocol\n\nFor the rest of this scene, you gain +1 Accuracy on all
+        attacks, checks, and saves; additionally, 1/turn, you can BOOST as a free action.</string>
+    <string name="antiMaterialRifle">ANTI-MATERIAL RIFLE\nAccurate, AP, Loading, Ordnance\n[Heavy Rifle] Range 20, 2d6 Kinetic</string>
+    <string name="assaultRifle">ASSAULT RIFLE\nReliable 2\n[Main Rifle] Range 10, 1d6 Kinetic</string>
+    <string name="chargedBlade">CHARGED BLADE\nAP\n[Main Melee] Threat 1, 1d3+3 Energy</string>
+    <string name="cyclonePulseRifle">CYCLONE PULSE RIFLE\nAccurate, Loading, Reliable 5\n[Superheavy Rifle] Range 15, 3d6+3 Kinetic</string>
+    <string name="heavyChargedBlade">HEAVY CHARGED BLADE\nAP\n[Heavy Melee] Threat 1, 1d6+3 Energy</string>
+    <string name="heavyMachineGun">HEAVY MACHINE GUN\nInaccurate\n[Heavy Cannon] Range 8, 2d6+4 Kinetic</string>
+    <string name="heavyMeleeWeapon">HEAVY MELEE WEAPON\n-\n[Heavy Melee] Threat 1, 2d6+1 Kinetic</string>
+    <string name="howitzer">HOWITZER\nArcing, Inaccurate, Loading, Ordnance\n[Heavy Cannon] Range 20/Blast 2, 2d6 Explosive</string>
+    <string name="missileRack">MISSILE RACK\nLoading\n[Auxiliary Launcher] Range 10/Blast 1, 1d3+1 Explosive</string>
+    <string name="mortar">MORTAR\nArcing, Inaccurate\n[Main Cannon] Range 15/Blast 1, 1d6+1 Explosive</string>
+    <string name="hunterKillerNexus">HUNTER-KILLER NEXUS\nSmart\n[Main Nexus] Range 10, 1d6 Kinetic</string>
+    <string name="lightNexus">LIGHT NEXUS\nSmart\n[Auxiliary Nexus] Range 10, 1d3 Kinetic</string>
+    <string name="pistol">PISTOL\nReliable 1\n[Auxiliary CQB] Range 5/Threat 3, 1d3 Kinetic</string>
+    <string name="progressiveKnife">PROGRESSIVE KNIFE\nOverkill\n[Auxiliary Melee] Threat 1, 1d3+1 Energy</string>
+    <string name="rpg">ROCKET-PROPELLED GRENADE\nLoading, Ordnance\n[Main Launcher] Range 10/Blast 2, 1d6+1 Explosive</string>
+    <string name="shotgun">SHOTGUN\n-\n[Main CQB] Range 5/Threat 3, 1d6 Kinetic</string>
+    <string name="tacticalKnife">TACTICAL KNIFE\nThrown 3\[Auxiliary Melee] Threat 1, 1d3+1 Kinetic</string>
+    <string name="tacticalMeleeWeapon">TACTICAL MELEE WEAPON\n-\n[Main Melee] Threat 1, 1d6+2 Kinetic</string>
+    <string name="thermalLance">THERMAL LANCE\n2 Heat (Self)\n[Heavy Cannon] Line 10, 1d6+3 Energy</string>
+    <string name="thermalPistol">THERMAL PISTOL\n-\n[Auxiliary CQB] Line 5, 2 Energy</string>
+    <string name="thermalRifle">THERMAL RIFLE\nAP\n[Main Rifle] Range 5, 1d3+2 Energy</string>
+    <string name="comcponAI">COMP/CON ASSISTANT UNIT [2 SP, AI, Unique]\n\nYour mech has a basic comp/con unit, granting it
+the AI tag. The comp/con can speak to you and has
+a personality, but, unlike an NHP, is not truly capable
+of independent thought. It is obedient to you alone.
+You can give control of your mech to its comp/con
+as a protocol, allowing your mech to act
+independently on your turn with its own set of
+actions. Unlike other AIs, a mech controlled by a
+comp/con has no independent initiative and requires
+direct input. Your mech will follow basic courses of
+action (defend this area, attack this enemy, protect
+me, etc.) to the best of its ability, or will act to defend
+itself if its instructions are complete or it receives no
+further guidance. You can issue new commands at
+the start of your turn as long as you are within 50
+and have the means to communicate with your
+mech. Comp/con units are not true NHPs and thus
+cannot enter cascade.</string>
+    <string name="paintJob">CUSTOM PAINT JOB [1 SP, Unique]\n\nWhen your mech takes structure damage, roll 1d6.
+    On a 6, you return to 1 HP and ignore the damage
+    – the hit simply ‘scratched your paint’.
+    This system can only be used once between full
+    repairs, and is not a valid target for system
+    destruction.
+</string>
+<string name="exCompartment">EXPANDED COMPARTMENT [1 SP, Unique]\n\nYour mech has space for one additional non-
+    MECH character or object of Size 1/2 to ride as a
+    passenger in the cockpit. While inside the mech,
+    they cannot suffer any effect from outside or be
+    targeted by attacks, as if they were a pilot. You
+    can hand over or take back control to or from
+    them at the start of any turn (following the same
+    rules as pilot and AI), but if they take over the
+    controls from you, the mech becomes IMPAIRED
+    and SLOWED to reflect the lack of appropriate
+    licenses and integration.
+    </string>
+<string name="manipulators">MANIPULATORS [1 SP, Unique]\n\nYour mech has an extra set of limbs. They are too
+    small to have any combat benefit, but allow the mech
+    to interact with objects that would otherwise be too
+    small or sensitive (e.g., pilot-sized touch pads).
+    </string>
+<string name="smokeCharges">PATTERN-A SMOKE CHARGES [2 SP, Limited 3, Unique]\n\nYou may spend a charge from this system for one
+    of the following effects:
+    • Smoke grenade (Grenade, Range 5, Blast 2): All
+    characters and objects within the blast area
+    benefit from soft cover until the end of your next
+    turn, at which point the smoke disperses.
+    • Smoke mine (Mine, Blast 3): This mine detonates
+    when any allied character moves over or
+    adjacent to it. All characters and objects within
+    the burst area benefit from soft cover until the
+    end of the detonating character’s next turn, at
+    which point the smoke disperses.
+    </string>
+<string name="depCover">PATTERN-A JERICHO DEPLOYABLE COVER [2 SP, Deployable, Unique, Quick Action]\n\nAs a quick action, you may deploy two sections of
+    SIZE 1 hard cover in free spaces adjacent to the
+    user and to each other. Each section is an object
+    with 5 EVASION and 10 HP that can be targeted and
+    destroyed individually. It is one full action to pick
+    up both sections of cover once they have been
+    deployed.
+    Repairing the system while resting or repairing
+    restores both sections.
+    </string>
+<string name="hexCharges">PATTERN-B HEX CHARGES [2 SP, Limited 3, Unique]\n\nYou may spend a charge from this system for one
+    of the following effects:
+    • Frag grenade (Grenade, Range 5, Blast 1): All
+    characters within the blast area must pass an
+    AGILITY save or take 1d6 Explosive damage. On a successful
+    save, they take half damage.
+    • Explosive mine (Mine, Burst 1): All characters
+    within the burst area must pass an AGILITY save
+    or take 2d6 Explosive damage. On a successful save, they take
+    half damage.
+    </string>
+<string name="personalizations">PERSONALIZATIONS [1 SP, Unique]\n\nYour mech gains +2 HP and, in consultation with
+    the GM, you may establish a minor modification
+    you have made to your mech.
+    This mod has no numerical benefit beyond the
+    additional HP it grants, but could provide other
+    useful effects. If the GM agrees that this mod
+    would help with either a pilot or mech skill check,
+    you gain +1 ACCURACY for that check.
+    </string>
+<string name="stableStructure">STABLE STRUCTURE [2 SP, Unique]\n\nYour mech gains +1 ACCURACY on saves to avoid PRONE or
+    KNOCKBACK.
+    </string>
+<string name="turretDrones">TURRET DRONES [2 SP, Limited 3, Unique, Quick Action]\n\nDrone (SIZE 1/2, 5 HP, 10 E-DEFENSE, 10 EVASION,
+    TAGS: DRONE)
+    Expend a charge to deploy a turret drone that
+    attaches to any object or surface within SENSORS
+    and line of sight. Gain the TURRET ATTACK
+    reaction, which can be taken once for each
+    deployed turret drone. Turret drones cannot be
+    recalled and expire at the end of the scene.
+    </string>
+<string name="t1shield">TYPE-I SHIELD [2 SP, Shield, Unique, Protocol, 1 Heat (Self)]\n\n
+    As a protocol, nominate a character within line of
+    sight: all ranged or melee attacks that they make
+    against you or that you make against them gain
+    +2 DIFFICULTY until the start of your next turn.
+    </string>
+<string name="evaModule">EVA MODULE [1 SP, Unique]\n\nYour mech has a propulsion system suitable for
+    use in low or zero gravity and underwater
+    environments. In those environments, you can fly
+    and are not SLOWED.
+    </string>
+<string name="jumpJets">RAPID BURST JUMP JET SYSTEM [2 SP, Unique]\n\nYou can fly when you BOOST; however, you must
+    end the movement on the ground or another solid
+    surface, or else immediately begin falling.
+    </string>
+<string name="flightSystem">TYPE-I FLIGHT SYSTEM [3 SP, Unique]\n\nYou can fly when you BOOST or make a standard
+    move; however, you take SIZE +1 Heat at the end of
+    any of your turns in which you fly this way.
+    </string>
+    </resources>

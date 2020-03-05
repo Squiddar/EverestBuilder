@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatHub">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="80dp">
+
+            <TextView
+                android:id="@+id/spVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/techAttackVal"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spTag" />
+
+            <TextView
+                android:id="@+id/techAttackVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/limitedBonusVal"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/spVal"
+                app:layout_constraintTop_toBottomOf="@+id/techAttackTag" />
+
+            <TextView
+                android:id="@+id/limitedBonusVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/techAttackVal"
+                app:layout_constraintTop_toBottomOf="@+id/limitedBonusTag" />
+
+            <TextView
+                android:id="@+id/attackBonusVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="0"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/sensorRangeTag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/attackBonusTag" />
+
+            <TextView
+                android:id="@+id/sensorRangeVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="10"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/saveTargetTag"
+                app:layout_constraintStart_toEndOf="@+id/attackBonusTag"
+                app:layout_constraintTop_toBottomOf="@+id/sensorRangeTag" />
+
+            <TextView
+                android:id="@+id/saveTargetVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="10"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sensorRangeTag"
+                app:layout_constraintTop_toBottomOf="@+id/saveTargetTag" />
+
+            <TextView
+                android:id="@+id/speedVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/evasionTag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/speedTag" />
+
+            <TextView
+                android:id="@+id/evasionVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/eDefTag"
+                app:layout_constraintStart_toEndOf="@+id/speedTag"
+                app:layout_constraintTop_toBottomOf="@+id/evasionTag" />
+
+            <TextView
+                android:id="@+id/eDefVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/evasionTag"
+                app:layout_constraintTop_toBottomOf="@+id/eDefTag" />
+
+            <TextView
+                android:id="@+id/stressVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="4"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/heatCapTag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stressTag" />
+
+            <TextView
+                android:id="@+id/heatCapVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/repairCapTag"
+                app:layout_constraintStart_toEndOf="@+id/stressTag"
+                app:layout_constraintTop_toBottomOf="@+id/heatCapTag" />
+
+            <TextView
+                android:id="@+id/repairCapVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/heatCapTag"
+                app:layout_constraintTop_toBottomOf="@+id/repairCapTag" />
+
+            <TextView
+                android:id="@+id/structureVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="4"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/hpTag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/structureTag" />
+
+            <TextView
+                android:id="@+id/hpVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/armorTag"
+                app:layout_constraintStart_toEndOf="@+id/structureTag"
+                app:layout_constraintTop_toBottomOf="@+id/hpTag" />
+
+            <TextView
+                android:id="@+id/armorVal"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="0"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hpTag"
+                app:layout_constraintTop_toBottomOf="@+id/armorTag" />
+
+            <TextView
+                android:id="@+id/shName"
+                android:layout_width="215dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:autoSizeTextType="uniform"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/structureTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:text="Structure"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/hpTag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shName" />
+
+            <TextView
+                android:id="@+id/hpTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:text="HP"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/armorTag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/structureTag"
+                app:layout_constraintTop_toBottomOf="@+id/shName" />
+
+            <TextView
+                android:id="@+id/armorTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:text="Armor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/hpTag"
+                app:layout_constraintTop_toBottomOf="@+id/shName" />
+
+            <TextView
+                android:id="@+id/stressTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Stress"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/heatCapTag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/structureVal" />
+
+            <TextView
+                android:id="@+id/speedTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Speed"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/evasionTag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stressVal" />
+
+            <TextView
+                android:id="@+id/attackBonusTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Attack Bonus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/sensorRangeTag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/speedVal" />
+
+            <TextView
+                android:id="@+id/heatCapTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Heat Cap"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/repairCapTag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/stressTag"
+                app:layout_constraintTop_toBottomOf="@+id/hpVal" />
+
+            <TextView
+                android:id="@+id/repairCapTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Repair Cap"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/heatCapTag"
+                app:layout_constraintTop_toBottomOf="@+id/armorVal" />
+
+            <TextView
+                android:id="@+id/evasionTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Evasion"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/eDefTag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/speedTag"
+                app:layout_constraintTop_toBottomOf="@+id/heatCapVal" />
+
+            <TextView
+                android:id="@+id/eDefTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="E-Defense"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/evasionTag"
+                app:layout_constraintTop_toBottomOf="@+id/repairCapVal" />
+
+            <TextView
+                android:id="@+id/sensorRangeTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Sensors"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/saveTargetTag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/attackBonusTag"
+                app:layout_constraintTop_toBottomOf="@+id/evasionVal" />
+
+            <TextView
+                android:id="@+id/saveTargetTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Save Target"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/sensorRangeTag"
+                app:layout_constraintTop_toBottomOf="@+id/eDefVal" />
+
+            <TextView
+                android:id="@+id/traitsTag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="14dp"
+                android:text="@string/mech_traits"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spVal" />
+
+            <TextView
+                android:id="@+id/coreTag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="14dp"
+                android:text="@string/mech_core_power"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/traitsTag" />
+
+            <TextView
+                android:id="@+id/weaponTag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="14dp"
+                android:text="Weapon"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/coreTag" />
+
+            <TextView
+                android:id="@+id/systemTag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:text="System"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weapon_layout" />
+
+            <LinearLayout
+                android:id="@+id/systems_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:minHeight="80dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/systemTag">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/addSystemButton"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:text="+" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/systemOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:autoSizeMaxTextSize="20sp"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center|start"
+                            android:textAlignment="gravity" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/spTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="SP"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/techAttackTag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/attackBonusVal" />
+
+            <TextView
+                android:id="@+id/techAttackTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Tech Attack"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/limitedBonusTag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/spTag"
+                app:layout_constraintTop_toBottomOf="@+id/sensorRangeVal" />
+
+            <TextView
+                android:id="@+id/limitedBonusTag"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Lim. Bonus"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/techAttackTag"
+                app:layout_constraintTop_toBottomOf="@+id/saveTargetVal" />
+
+            <LinearLayout
+                android:id="@+id/weapon_layout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/weaponTag">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <Button
+                        android:id="@+id/addWeaponButton"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="start"
+                        android:text="+" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/weaponOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:autoSizeMaxTextSize="20sp"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center|start"
+                            android:textAlignment="gravity" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btm_nav"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
+        app:menu="@menu/bottom_nav"
+        app:labelVisibilityMode="labeled"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
