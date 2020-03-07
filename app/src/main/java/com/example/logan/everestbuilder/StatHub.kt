@@ -16,9 +16,12 @@ class StatHub : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stat_hub)
 
+        //Add an action bar with a button that will return us to mech selection
+
         val actionbar = supportActionBar
         actionbar!!.title = "Home"
         actionbar.setDisplayHomeAsUpEnabled(true)
+
 
         //Establish shared preferences and grab them in case the user switches activities using
         //the bottom navigation bar
@@ -39,41 +42,6 @@ class StatHub : AppCompatActivity() {
         editor.putInt(EVEREST_ENGI, engineering)
         editor.apply()
 
-        //Set up bottom navigation bar to switch activities on press
-
-        val bottomNavigation : BottomNavigationView = findViewById(R.id.btm_nav)
-
-        bottomNavigation.setOnNavigationItemSelectedListener { item ->
-            when(item.itemId){
-
-                R.id.name_configuration -> {
-                    val intent = Intent(this, NameConfiguration::class.java)
-                    startActivity(intent)
-                }
-
-                R.id.mech_skills -> {
-                    val intent = Intent(this, MechSkills::class.java)
-                    startActivity(intent)
-                }
-
-                R.id.stat_hub -> {
-                    val intent = Intent(this, StatHub::class.java)
-                    startActivity(intent)
-                }
-
-                R.id.mech_weapons -> {
-                    val intent = Intent(this, MechWeapons::class.java)
-                    startActivity(intent)
-                }
-
-                R.id.mech_systems -> {
-                    val intent = Intent(this, MechSystems::class.java)
-                    startActivity(intent)
-                }
-            }
-
-            true
-        }
 
         //Initialize values
 
@@ -89,6 +57,7 @@ class StatHub : AppCompatActivity() {
         val limitedBonus_val: TextView = findViewById(R.id.limitedBonusVal)
         val weaponOne: TextView = findViewById(R.id.weaponOne)
         val systemOne: TextView = findViewById(R.id.systemOne)
+
 
         //Takes the name and stats from shared preferences that were chosen in previous activities
         //and places them into values
@@ -148,6 +117,7 @@ class StatHub : AppCompatActivity() {
         traitsDesc.text = mechTraits.toString()
         coreDesc.text = mechCore.toString()
 
+
         //Since we choose the weapon and system from the Stat Hub page, we grab those values from
         //shared preferences here. The addWeapon and addSystem button take us to the activity where
         //we select our respective weapon and system
@@ -164,7 +134,46 @@ class StatHub : AppCompatActivity() {
             val intent = Intent(this, MechSystems::class.java)
             startActivity(intent)
         }
+
+
+        //Set up bottom navigation bar to switch activities on press
+
+        val bottomNavigation : BottomNavigationView = findViewById(R.id.btm_nav)
+
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId){
+
+                R.id.name_configuration -> {
+                    val intent = Intent(this, NameConfiguration::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.mech_skills -> {
+                    val intent = Intent(this, MechSkills::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.stat_hub -> {
+                    val intent = Intent(this, StatHub::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.mech_weapons -> {
+                    val intent = Intent(this, MechWeapons::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.mech_systems -> {
+                    val intent = Intent(this, MechSystems::class.java)
+                    startActivity(intent)
+                }
+            }
+            true
+        }
     }
+
+
+    //This function tells the home button to take the user to mech selection when pressed
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()

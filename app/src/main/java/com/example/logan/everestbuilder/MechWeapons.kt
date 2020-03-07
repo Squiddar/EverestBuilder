@@ -15,9 +15,12 @@ class MechWeapons : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mech_weapons)
 
+        //Add an action bar with a button that will return us to mech selection
+
         val actionbar = supportActionBar
         actionbar!!.title = "Home"
         actionbar.setDisplayHomeAsUpEnabled(true)
+
 
         //Establish shared preferences and grab them in case the user switches activities using
         //the bottom navigation bar
@@ -37,6 +40,172 @@ class MechWeapons : AppCompatActivity() {
         editor.putInt(EVEREST_SYS, systems)
         editor.putInt(EVEREST_ENGI, engineering)
         editor.apply()
+
+
+        //Each of these buttons assigns places the appropriate string into the Weapon shared
+        //preference value, then goes back to the StatHub activity
+
+        val amrButton: Button = findViewById(R.id.amrButton)
+        amrButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.antiMaterialRifle)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        asrButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.assaultRifle)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        cbButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.chargedBlade)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        cprButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.cyclonePulseRifle)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        hcbButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.heavyChargedBlade)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        hmgButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.heavyMachineGun)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        hmwButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.heavyMeleeWeapon)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        howitzerButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.howitzer)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        mrButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.missileRack)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        hknButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.hunterKillerNexus)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        lnButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.lightNexus)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        pistolButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.pistol)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        pkButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.progressiveKnife)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        rpgButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.rpg)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        shotgunButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.shotgun)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        tkButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.tacticalKnife)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        tmwButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.tacticalMeleeWeapon)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        tlButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.thermalLance)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        tpButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.thermalPistol)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
+        trButton.setOnClickListener {
+            val intent = Intent(this, StatHub::class.java)
+            val weapon = resources.getString(R.string.thermalRifle)
+            editor.putString(EVEREST_WEAPON, weapon)
+            editor.apply()
+            startActivity(intent)
+        }
+
 
         //Set up bottom navigation bar to switch activities on press
 
@@ -70,194 +239,12 @@ class MechWeapons : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-
             true
         }
-
-        //Each of these buttons assigns places the appropriate string into the Weapon shared
-        //preference value, then goes back to the StatHub activity
-
-        val amrButton: Button = findViewById(R.id.amrButton)
-        amrButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.antiMaterialRifle)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        asrButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.assaultRifle)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        cbButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.chargedBlade)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        cprButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.cyclonePulseRifle)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        hcbButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.heavyChargedBlade)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        hmgButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.heavyMachineGun)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        hmwButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.heavyMeleeWeapon)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        howitzerButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.howitzer)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        mrButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.missileRack)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        hknButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.hunterKillerNexus)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        lnButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.lightNexus)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        pistolButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.pistol)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        pkButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.progressiveKnife)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        rpgButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.rpg)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        shotgunButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.shotgun)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        tkButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.tacticalKnife)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        tmwButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.tacticalMeleeWeapon)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        tlButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.thermalLance)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        tpButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.thermalPistol)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
-
-        trButton.setOnClickListener {
-            val intent = Intent(this, StatHub::class.java)
-            val weapon = resources.getString(R.string.thermalRifle)
-            val editor = sharedPreferences.edit()
-            editor.putString(EVEREST_WEAPON, weapon)
-            editor.apply()
-            startActivity(intent)
-        }
     }
+
+
+    //This function tells the home button to take the user to mech selection when pressed
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()

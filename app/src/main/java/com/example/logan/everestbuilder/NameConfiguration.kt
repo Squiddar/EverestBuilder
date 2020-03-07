@@ -14,9 +14,12 @@ class NameConfiguration : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_name_configuration)
 
+        //Add an action bar with a button that will return us to mech selection
+
         val actionbar = supportActionBar
         actionbar!!.title = "Home"
         actionbar.setDisplayHomeAsUpEnabled(true)
+
 
         //Establish shared preferences and grab them in case the user switches activities using
         //the bottom navigation bar
@@ -36,6 +39,23 @@ class NameConfiguration : AppCompatActivity() {
         editor.putInt(EVEREST_SYS, systems)
         editor.putInt(EVEREST_ENGI, engineering)
         editor.apply()
+
+
+        //Sets up the configButton to store the entered configName into shared preferences, then go to
+        //the Mech Skills activity
+
+        val configButton: Button = findViewById(R.id.configButton)
+        val configName: EditText = findViewById(R.id.configName)
+
+        configButton.setOnClickListener{
+
+            val mechName = configName.text.toString()
+            editor.putString(EVEREST_NAME, mechName)
+            editor.apply()
+            val intent = Intent(this, MechSkills::class.java)
+            startActivity(intent)
+        }
+
 
         //Set up bottom navigation bar to switch activities on press
 
@@ -69,26 +89,12 @@ class NameConfiguration : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-
             true
         }
-
-        //Sets up the configButton to store the entered configName into shared preferences, then go to
-        //the Mech Skills activity
-
-        val configButton: Button = findViewById(R.id.configButton)
-        val configName: EditText = findViewById(R.id.configName)
-
-        configButton.setOnClickListener{
-
-            val mechName = configName.text.toString()
-            editor.putString(EVEREST_NAME, mechName)
-            editor.apply()
-            val intent = Intent(this, MechSkills::class.java)
-            startActivity(intent)
-        }
-
     }
+
+
+    //This function tells the home button to take the user to mech selection when pressed
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
