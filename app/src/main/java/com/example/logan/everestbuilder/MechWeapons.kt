@@ -49,7 +49,6 @@ class MechWeapons : AppCompatActivity() {
         amrButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.antiMaterialRifle)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -58,7 +57,6 @@ class MechWeapons : AppCompatActivity() {
         asrButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.assaultRifle)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -67,7 +65,6 @@ class MechWeapons : AppCompatActivity() {
         cbButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.chargedBlade)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -76,7 +73,6 @@ class MechWeapons : AppCompatActivity() {
         cprButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.cyclonePulseRifle)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -85,7 +81,6 @@ class MechWeapons : AppCompatActivity() {
         hcbButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.heavyChargedBlade)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -94,7 +89,6 @@ class MechWeapons : AppCompatActivity() {
         hmgButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.heavyMachineGun)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -103,7 +97,6 @@ class MechWeapons : AppCompatActivity() {
         hmwButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.heavyMeleeWeapon)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -112,7 +105,6 @@ class MechWeapons : AppCompatActivity() {
         howitzerButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.howitzer)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -121,7 +113,6 @@ class MechWeapons : AppCompatActivity() {
         mrButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.missileRack)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -130,7 +121,6 @@ class MechWeapons : AppCompatActivity() {
         hknButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.hunterKillerNexus)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -139,7 +129,6 @@ class MechWeapons : AppCompatActivity() {
         lnButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.lightNexus)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -148,7 +137,6 @@ class MechWeapons : AppCompatActivity() {
         pistolButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.pistol)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -157,7 +145,6 @@ class MechWeapons : AppCompatActivity() {
         pkButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.progressiveKnife)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -166,7 +153,6 @@ class MechWeapons : AppCompatActivity() {
         rpgButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.rpg)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -175,7 +161,6 @@ class MechWeapons : AppCompatActivity() {
         shotgunButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.shotgun)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -184,7 +169,6 @@ class MechWeapons : AppCompatActivity() {
         tkButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.tacticalKnife)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -193,7 +177,6 @@ class MechWeapons : AppCompatActivity() {
         tmwButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.tacticalMeleeWeapon)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -202,7 +185,6 @@ class MechWeapons : AppCompatActivity() {
         tlButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.thermalLance)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -211,7 +193,6 @@ class MechWeapons : AppCompatActivity() {
         tpButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.thermalPistol)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
@@ -220,7 +201,6 @@ class MechWeapons : AppCompatActivity() {
         trButton.setOnClickListener {
             val intent = Intent(this, StatHub::class.java)
             val weapon = resources.getString(R.string.thermalRifle)
-            val editor = sharedPreferences.edit()
             editor.putString(EVEREST_WEAPON, weapon)
             editor.apply()
             startActivity(intent)
