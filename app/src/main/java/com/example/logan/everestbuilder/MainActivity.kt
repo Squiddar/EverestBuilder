@@ -37,6 +37,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Add an action bar with a button that will return us to mech selection
+
+        val actionbar = supportActionBar
+        actionbar!!.title = "Home"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
+
         //Establish shared preferences and grab them in case the user switches activities using
         //the bottom navigation bar
 
@@ -56,15 +63,8 @@ class MainActivity : AppCompatActivity() {
         editor.putInt(EVEREST_ENGI, engineering)
         editor.apply()
 
-        //Set up bottom navigation bar to switch activities on press
 
-        val bottomNavigation: BottomNavigationView = findViewById(R.id.btm_nav)
-
-        val actionbar = supportActionBar
-        actionbar!!.title = "Home"
-        actionbar.setDisplayHomeAsUpEnabled(true)
-
-        val addBlackbeardButton: Button = findViewById(R.id.addBlackbeardButton)
+        //This button selects the Blackbeard as the frame and passes its base stats into shared preferences
 
         addBlackbeardButton.setOnClickListener {
             var blackbeard = Mech("Blackbeard", resources.getString(R.string.blackbeard_description),
@@ -92,6 +92,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        //This button selects the Everest as the frame and passes its base stats into shared preferences
+
         addEverestButton.setOnClickListener {
             var everest = Mech("Everest", "@string/everest_description",
                     10, 0, 6, 5, 4, 8, 8,
@@ -117,6 +120,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NameConfiguration::class.java)
             startActivity(intent)
         }
+
+
+        //This button selects the Sherman as the frame and passes its base stats into shared preferences
 
         addShermanButton.setOnClickListener {
             var sherman = Mech("Sherman", "@string/sherman_description",
@@ -144,6 +150,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        //This button selects the Metalmark as the frame and passes its base stats into shared preferences
+
         addMetalmarkButton.setOnClickListener {
             var metalmark = Mech("Metalmark", "@string/metalmark_description",
                     8, 1, 5, 4, 5, 10, 6,
@@ -170,6 +179,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        //This button selects the Goblin as the frame and passes its base stats into shared preferences
+
         addGoblinButton.setOnClickListener {
             var goblin = Mech("Goblin", "@string/goblin_description",
                     6, 0, 4, 2, 5, 10, 12,
@@ -195,6 +207,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NameConfiguration::class.java)
             startActivity(intent)
         }
+
+
+        //Set up bottom navigation bar to switch activities on press
+
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.btm_nav)
 
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
@@ -224,10 +241,12 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-
             true
         }
     }
+
+
+    //This function tells the home button to take the user to mech selection when pressed
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
@@ -236,6 +255,9 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 }
+
+
+//This class is the base for each mech frame
 
 class Mech{
     var name: String

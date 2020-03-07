@@ -15,9 +15,12 @@ class MechWeapons : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mech_weapons)
 
+        //Add an action bar with a button that will return us to mech selection
+
         val actionbar = supportActionBar
         actionbar!!.title = "Home"
         actionbar.setDisplayHomeAsUpEnabled(true)
+
 
         //Establish shared preferences and grab them in case the user switches activities using
         //the bottom navigation bar
@@ -38,41 +41,6 @@ class MechWeapons : AppCompatActivity() {
         editor.putInt(EVEREST_ENGI, engineering)
         editor.apply()
 
-        //Set up bottom navigation bar to switch activities on press
-
-        val bottomNavigation : BottomNavigationView = findViewById(R.id.btm_nav)
-
-        bottomNavigation.setOnNavigationItemSelectedListener { item ->
-            when(item.itemId){
-
-                R.id.name_configuration -> {
-                    val intent = Intent(this, NameConfiguration::class.java)
-                    startActivity(intent)
-                }
-
-                R.id.mech_skills -> {
-                    val intent = Intent(this, MechSkills::class.java)
-                    startActivity(intent)
-                }
-
-                R.id.stat_hub -> {
-                    val intent = Intent(this, StatHub::class.java)
-                    startActivity(intent)
-                }
-
-                R.id.mech_weapons -> {
-                    val intent = Intent(this, MechWeapons::class.java)
-                    startActivity(intent)
-                }
-
-                R.id.mech_systems -> {
-                    val intent = Intent(this, MechSystems::class.java)
-                    startActivity(intent)
-                }
-            }
-
-            true
-        }
 
         //Each of these buttons assigns places the appropriate string into the Weapon shared
         //preference value, then goes back to the StatHub activity
@@ -257,7 +225,46 @@ class MechWeapons : AppCompatActivity() {
             editor.apply()
             startActivity(intent)
         }
+
+
+        //Set up bottom navigation bar to switch activities on press
+
+        val bottomNavigation : BottomNavigationView = findViewById(R.id.btm_nav)
+
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId){
+
+                R.id.name_configuration -> {
+                    val intent = Intent(this, NameConfiguration::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.mech_skills -> {
+                    val intent = Intent(this, MechSkills::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.stat_hub -> {
+                    val intent = Intent(this, StatHub::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.mech_weapons -> {
+                    val intent = Intent(this, MechWeapons::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.mech_systems -> {
+                    val intent = Intent(this, MechSystems::class.java)
+                    startActivity(intent)
+                }
+            }
+            true
+        }
     }
+
+
+    //This function tells the home button to take the user to mech selection when pressed
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
