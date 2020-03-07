@@ -60,6 +60,10 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNavigation: BottomNavigationView = findViewById(R.id.btm_nav)
 
+        val actionbar = supportActionBar
+        actionbar!!.title = "Home"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         val addBlackbeardButton: Button = findViewById(R.id.addBlackbeardButton)
 
         addBlackbeardButton.setOnClickListener {
@@ -140,6 +144,58 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        addMetalmarkButton.setOnClickListener {
+            var metalmark = Mech("Metalmark", "@string/metalmark_description",
+                    8, 1, 5, 4, 5, 10, 6,
+                    10, 10, 5, +0)
+            var trait = resources.getString(R.string.metalmark_traits)
+            var core = resources.getString(R.string.metalmark_core_power)
+            editor.putInt(BASE_HP, metalmark.hp)
+            editor.putInt(BASE_ARMOR, metalmark.armor)
+            editor.putInt(BASE_HEAT_CAP, metalmark.heatCap)
+            editor.putInt(BASE_REPAIR_CAP, metalmark.repairCap)
+            editor.putInt(BASE_SPEED, metalmark.speed)
+            editor.putInt(BASE_EVASION, metalmark.evasion)
+            editor.putInt(BASE_EDEF, metalmark.eDefense)
+            editor.putInt(BASE_SENSOR_RANGE, metalmark.sensorRange)
+            editor.putInt(BASE_SAVE_TARGET, metalmark.saveTarget)
+            editor.putInt(BASE_SP, metalmark.sp)
+            editor.putInt(BASE_TECH_ATTACK, metalmark.techAttack)
+            editor.putString(FRAME_NAME, metalmark.name)
+            editor.putString(FRAME_TRAIT, trait)
+            editor.putString(FRAME_CORE_POWER, core)
+            editor.apply()
+
+            val intent = Intent(this, NameConfiguration::class.java)
+            startActivity(intent)
+        }
+
+        addGoblinButton.setOnClickListener {
+            var goblin = Mech("Goblin", "@string/goblin_description",
+                    6, 0, 4, 2, 5, 10, 12,
+                    20, 11, 8, +2)
+            var trait = resources.getString(R.string.goblin_traits)
+            var core = resources.getString(R.string.goblin_core_power)
+            editor.putInt(BASE_HP, goblin.hp)
+            editor.putInt(BASE_ARMOR, goblin.armor)
+            editor.putInt(BASE_HEAT_CAP, goblin.heatCap)
+            editor.putInt(BASE_REPAIR_CAP, goblin.repairCap)
+            editor.putInt(BASE_SPEED, goblin.speed)
+            editor.putInt(BASE_EVASION, goblin.evasion)
+            editor.putInt(BASE_EDEF, goblin.eDefense)
+            editor.putInt(BASE_SENSOR_RANGE, goblin.sensorRange)
+            editor.putInt(BASE_SAVE_TARGET, goblin.saveTarget)
+            editor.putInt(BASE_SP, goblin.sp)
+            editor.putInt(BASE_TECH_ATTACK, goblin.techAttack)
+            editor.putString(FRAME_NAME, goblin.name)
+            editor.putString(FRAME_TRAIT, trait)
+            editor.putString(FRAME_CORE_POWER, core)
+            editor.apply()
+
+            val intent = Intent(this, NameConfiguration::class.java)
+            startActivity(intent)
+        }
+
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
 
@@ -171,6 +227,13 @@ class MainActivity : AppCompatActivity() {
 
             true
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        return true
     }
 }
 

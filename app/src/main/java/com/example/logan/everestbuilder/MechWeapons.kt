@@ -15,6 +15,10 @@ class MechWeapons : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mech_weapons)
 
+        val actionbar = supportActionBar
+        actionbar!!.title = "Home"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         //Establish shared preferences and grab them in case the user switches activities using
         //the bottom navigation bar
 
@@ -253,6 +257,13 @@ class MechWeapons : AppCompatActivity() {
             editor.apply()
             startActivity(intent)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        return true
     }
 }
 

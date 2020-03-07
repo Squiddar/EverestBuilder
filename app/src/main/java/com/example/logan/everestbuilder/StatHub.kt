@@ -16,6 +16,10 @@ class StatHub : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stat_hub)
 
+        val actionbar = supportActionBar
+        actionbar!!.title = "Home"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         //Establish shared preferences and grab them in case the user switches activities using
         //the bottom navigation bar
 
@@ -161,6 +165,14 @@ class StatHub : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        return true
+    }
+
 }
 
 

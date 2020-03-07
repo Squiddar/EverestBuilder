@@ -20,7 +20,9 @@ adjacent to you, or as close as possible. They
 become IMMOBILIZED until the end of their next
 turn. If they pass the save, they take half damage
 and are otherwise unaffected.</string>
-    <string name="blackbeard_description"><b>BLACKBEARD</b>\n\nA close range melee-oriented mech with powerful grappling abilites.</string>
+    <string name="blackbeard_description"><b>BLACKBEARD</b>\n\nA close-range, agile
+berserker, specializing in melee combat and
+grappling enemies.</string>
     <string name="sherman_traits"><b>SUPERIOR REACTOR</b>\nThe Sherman gains +1 Accuracy on all ENGINEERING
 checks and saves.\n\n<b>MATHUR STOP</b>\nWhen the Sherman clears all heat, you may choose
 to receive heat equal to half its Heat Cap, putting it
@@ -32,7 +34,39 @@ CHARGES, to a maximum of 4; additionally, for the
 rest of this scene, STABILIZE generates 2 charges
 instead of 1, and all terrain, objects, and
 deployables take 10 AP energy damage per charge on hit.</string>
-    <string name="sherman_description"><b>SHERMAN</b>\n\nA long range laser-wielding frame that uses its own heat to its advantage.</string>
+    <string name="sherman_description"><b>SHERMAN</b>\n\nA line mech with
+powerful energy weapons and an enormous laser
+lance.</string>
+    <string name="metalmark_traits"><b>FLASH CLOAK</b>\nThe metalmark is INVISIBLE while moving, but
+reappears when stationary.\n\n<b>CARAPACE ADAPTATION</b>\nWhen the Metalmark is in soft cover, ranged
+attackers gain +2 Difficulty instead of +1 Difficulty.</string>
+    <string name="metalmark_core_power"><b>TACTICAL CLOAK</b>\nActive (1CP), Protocol\n\nYou are INVISIBLE for the rest of the scene.</string>
+    <string name="metalmark_description"><b>METALMARK</b>\n\nA fast mech with shock
+weaponry and advanced cloaking.</string>
+    <string name="goblin_traits"><b>LITURGICODE</b>\nThe Goblin gains +1 Accuracy on tech attacks.\n\n<b>REACTIVE CODE</b>\n1/round, when the Goblin is hit by a tech attack, the
+Goblin may take any QUICK TECH option against the
+attacker as a reaction.\n\n<b>FRAGILE</b>\nThe Goblin receives +1 Difficulty on HULL checks and saves.</string>
+    <string name="goblin_core_power"><b>INSTINCT RIG</b>\nSymbiosis\nActive (1CP), Quick Action\n\nYour mech retracts its major systems and attaches
+itself to another mech, becoming more like a
+vestigial blister than a separate entity. The host must
+be an allied and willing mech not already hosting
+another Goblin, larger than and adjacent to you.
+While attached, you occupy their space, move with
+them, and benefit from hard cover, but can still be
+attacked and targeted separately. You also take any
+conditions and heat taken by your host.\n\nYour host may use your SYSTEMS, E-DEFENSE, and TECH
+ATTACK instead of their own. Additionally, from the
+beginning of the next round, you no longer take your
+own turns; instead, you can take two quick actions or
+one full action at any point during your host’s turn. You
+can’t OVERCHARGE or move, but may still take reactions
+and free actions normally. Your host’s turn counts as
+your turn for the purpose of effects that refer to the start
+or end of a character’s turn.\n\nThis effect lasts either for the rest of the scene, until
+you detach as a quick action, or until you or your
+host becomes STUNNED. When the effect ends, you
+don’t take a turn until the next round.</string>
+    <string name="goblin_description"><b>GOBLIN</b>\n\nA popular hacking platform, iconic and rightly feared among pilots.</string>
     <string name="antiMaterialRifle">ANTI-MATERIAL RIFLE\nAccurate, AP, Loading, Ordnance\n[Heavy Rifle] Range 20, 2d6 Kinetic</string>
     <string name="assaultRifle">ASSAULT RIFLE\nReliable 2\n[Main Rifle] Range 10, 1d6 Kinetic</string>
     <string name="chargedBlade">CHARGED BLADE\nAP\n[Main Melee] Threat 1, 1d3+3 Energy</string>
@@ -143,8 +177,7 @@ cannot enter cascade.</string>
     KNOCKBACK.
     </string>
 <string name="turretDrones">TURRET DRONES [2 SP, Limited 3, Unique, Quick Action]\n\nDrone (SIZE 1/2, 5 HP, 10 E-DEFENSE, 10 EVASION,
-    TAGS: DRONE)
-    Expend a charge to deploy a turret drone that
+    TAGS: DRONE)\n\nExpend a charge to deploy a turret drone that
     attaches to any object or surface within SENSORS
     and line of sight. Gain the TURRET ATTACK
     reaction, which can be taken once for each
