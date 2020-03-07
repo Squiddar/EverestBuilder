@@ -92,25 +92,47 @@ class StatHub : AppCompatActivity() {
         val mechName = sharedPreferences.getString(EVEREST_NAME, "Please input mech name.")
         sh_name.text = mechName
 
+        val frameName = sharedPreferences.getString(FRAME_NAME, "Null")
         val hullinput = sharedPreferences.getInt(EVEREST_HULL, 0)
         val agiinput = sharedPreferences.getInt(EVEREST_AGI, 0)
         val sysinput = sharedPreferences.getInt(EVEREST_SYS, 0)
         val engiinput = sharedPreferences.getInt(EVEREST_ENGI, 0)
+        val baseHP = sharedPreferences.getInt(BASE_HP, 0)
+        val baseArmor = sharedPreferences.getInt(BASE_ARMOR, 0)
+        val baseRepairCap = sharedPreferences.getInt(BASE_REPAIR_CAP, 0)
+        val baseEvasion = sharedPreferences.getInt(BASE_EVASION, 0)
+        val baseSpeed = sharedPreferences.getInt(BASE_SPEED, 0)
+        val baseEDef = sharedPreferences.getInt(BASE_EDEF, 0)
+        val baseTechAttack = sharedPreferences.getInt(BASE_TECH_ATTACK, 0)
+        val baseSP = sharedPreferences.getInt(BASE_SP, 0)
+        val baseHeatCap = sharedPreferences.getInt(BASE_HEAT_CAP, 0)
+        val baseSensorRange = sharedPreferences.getInt(BASE_SENSOR_RANGE, 0)
+        val baseSaveTarget = sharedPreferences.getInt(BASE_SAVE_TARGET, 0)
+        val mechTraits = sharedPreferences.getString(FRAME_TRAIT, "Null")
+        val mechCore = sharedPreferences.getString(FRAME_CORE_POWER, "Null")
+
 
         //These values are then used to calculate secondary stats which are then displayed in the
         //appropriate TextViews
 
-        val hp = (10+(2*hullinput))
-        val repaircap = 5+(hullinput/2)
-        val evasion = (8+agiinput)
-        val speed = 4+(agiinput/2)
-        val edef = 8+sysinput
-        val techAttack = sysinput
-        val sp = 6+(sysinput/2)
-        val heatCap = 6+engiinput
+        val hp = (baseHP+(2*hullinput))
+        val armor = baseArmor
+        val repaircap = baseRepairCap+(hullinput/2)
+        val evasion = (baseEvasion+agiinput)
+        val speed = baseSpeed+(agiinput/2)
+        val edef = baseEDef+sysinput
+        val techAttack = baseTechAttack+sysinput
+        val sp = baseSP+(sysinput/2)
+        val heatCap = baseHeatCap+engiinput
         val limitedBonus = engiinput/2
+        val sensorRange = baseSensorRange
+        val saveTarget = baseSaveTarget
 
+        frameTag.text = frameName.toString()
         hp_val.text = hp.toString()
+        armorVal.text = armor.toString()
+        sensorRangeVal.text = sensorRange.toString()
+        saveTargetVal.text = saveTarget.toString()
         heatcap_val.text = heatCap.toString()
         repaircap_val.text = repaircap.toString()
         speed_val.text = speed.toString()
@@ -119,6 +141,8 @@ class StatHub : AppCompatActivity() {
         sp_val.text = sp.toString()
         techAttack_val.text = techAttack.toString()
         limitedBonus_val.text = limitedBonus.toString()
+        traitsDesc.text = mechTraits.toString()
+        coreDesc.text = mechCore.toString()
 
         //Since we choose the weapon and system from the Stat Hub page, we grab those values from
         //shared preferences here. The addWeapon and addSystem button take us to the activity where

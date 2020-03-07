@@ -1,8 +1,38 @@
 <resources>
-    <string name="app_name">EverestBuilder</string>
-    <string name="mech_traits"><b>INITIATIVE</b>\n1/scene the Everest may take any quick action as a free action.\n\n<b>REPLACEABLE PARTS</b>\nWhile resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs.</string>
-    <string name="mech_core_power"><b>CORE SYSTEM</b>\nHYPERSPEC FUEL INJECTOR\nPower Up\nActive (1CP), Protocol\n\nFor the rest of this scene, you gain +1 Accuracy on all
+    <string name="app_name">Lancer Frame Builder</string>
+    <string name="everest_traits"><b>INITIATIVE</b>\n1/scene the Everest may take any quick action as a free action.\n\n<b>REPLACEABLE PARTS</b>\nWhile resting, the Everest can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs.</string>
+    <string name="everest_core_power">HYPERSPEC FUEL INJECTOR\nPower Up\nActive (1CP), Protocol\n\nFor the rest of this scene, you gain +1 Accuracy on all
         attacks, checks, and saves; additionally, 1/turn, you can BOOST as a free action.</string>
+    <string name="everest_description"><b>EVEREST</b>\n\nA balanced mech for those seeking a jack of all trades.</string>
+    <string name="blackbeard_traits"><b>GRAPPLE CABLE</b>\nThe Blackbeard can grapple targets within Range 5. If
+the GRAPPLE is successful, the Blackbeard is
+immediately pulled to a space adjacent the target
+by the most direct path. If there are no suitable
+spaces, the grapple breaks and the Blackbeard
+does not move.\n\nLOCK/KILL SUBSYSTEM\nWhile grappling, the Blackbeard can BOOST and
+use reactions.\n\nEXPOSED REACTOR\nThe Blackbeard receives +1 Difficulty on ENGINEERING
+checks and saves.</string>
+    <string name="blackbeard_core_power">OMNI-HARPOON\nActive (1CP), Quick Action\n\nThis system fires grappling harpoons at any
+number of targets within Range 5 and line of sight.
+Affected characters that fail a HULL save take
+2d6 kinetic damage, are knocked PRONE, and then pulled
+adjacent to you, or as close as possible. They
+become IMMOBILIZED until the end of their next
+turn. If they pass the save, they take half damage
+and are otherwise unaffected.</string>
+    <string name="blackbeard_description"><b>BLACKBEARD</b>\n\nA close range melee-oriented mech with powerful grappling abilites.</string>
+    <string name="sherman_traits"><b>SUPERIOR REACTOR</b>\nThe Sherman gains +1 Accuracy on all ENGINEERING
+checks and saves.\n\n<b>MATHUR STOP</b>\nWhen the Sherman clears all heat, you may choose
+to receive heat equal to half its Heat Cap, putting it
+in the Danger Zone.\n\n<b>VENT HEAT</b>\nWhen you STABILIZE the Sherman or it exceeds its
+HEAT CAP, it benefits from soft cover until the start
+of your next turn.</string>
+    <string name="sherman_core_power">COREBURN PROTOCOL\nActive (1CP), Protocol\n\nYour ZF4 SOLIDCORE immediately gains 3
+CHARGES, to a maximum of 4; additionally, for the
+rest of this scene, STABILIZE generates 2 charges
+instead of 1, and all terrain, objects, and
+deployables take 10 AP energy damage per charge on hit.</string>
+    <string name="sherman_description"><b>SHERMAN</b>\n\nA long range laser-wielding frame that uses its own heat to its advantage.</string>
     <string name="antiMaterialRifle">ANTI-MATERIAL RIFLE\nAccurate, AP, Loading, Ordnance\n[Heavy Rifle] Range 20, 2d6 Kinetic</string>
     <string name="assaultRifle">ASSAULT RIFLE\nReliable 2\n[Main Rifle] Range 10, 1d6 Kinetic</string>
     <string name="chargedBlade">CHARGED BLADE\nAP\n[Main Melee] Threat 1, 1d3+3 Energy</string>
@@ -140,4 +170,4 @@ cannot enter cascade.</string>
     move; however, you take SIZE +1 Heat at the end of
     any of your turns in which you fly this way.
     </string>
-    </resources>
+</resources>
